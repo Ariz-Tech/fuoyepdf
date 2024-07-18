@@ -412,8 +412,8 @@ footer{
         flex-direction: column;
         padding: 0;
     }
-    table{
-        max-width: 100svh;
+    section#download{
+        padding: 0;
     }
     .level{
         width: 97%;
