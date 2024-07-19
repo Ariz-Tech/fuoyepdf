@@ -412,9 +412,6 @@ footer{
         flex-direction: column;
         padding: 0;
     }
-    section#download{
-        padding: 0;
-    }
     .level{
         width: 97%;
     }
