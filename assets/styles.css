@@ -427,4 +427,7 @@ footer{
     .level{
         width: 97%;
     }
+    #courses ul {
+        grid-template-columns: 1fr;
+    }
 }
