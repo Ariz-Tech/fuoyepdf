@@ -242,31 +242,43 @@ main > * {
     color: black;
 }
 
-#faculty{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-}
+#courses ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
-.faculty .card{
-    width: 300px;
-    background-color: var(--primary-color);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px gray;
-}
-.faculty .card img{
-    width: 90%;
-    border-radius: 5px;
-    object-fit: cover;
-}
-.faculty .card p{
-    font-weight: bolder;
-}
+        #courses ul li {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #courses ul li:hover {
+            transform: translateY(-5px);
+        }
+
+        #courses ul li a {
+            display: block;
+            padding: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        #courses ul li h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--primary-background);
+        }
+
+        #courses ul li p {
+            font-size: 1rem;
+            color: #666;
+        }
+
 /* code for the #level is missing */
 #level {
     display: grid;
