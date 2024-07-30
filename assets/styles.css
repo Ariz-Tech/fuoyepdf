@@ -307,6 +307,38 @@ main > * {
     width: 100%;
     border-radius: 10px;
 }
+        #departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .department {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .department:hover {
+            transform: translateY(-5px);
+        }
+
+        .department h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .department img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -429,6 +461,9 @@ footer{
         width: 97%;
     }
     #courses ul {
+        grid-template-columns: 1fr;
+    }
+    #departments {
         grid-template-columns: 1fr;
     }
 }
