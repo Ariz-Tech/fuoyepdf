@@ -33,10 +33,9 @@
 
 .pdf-item h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--primary-color);
     margin: 0;
     max-width: 75%;
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -50,13 +49,6 @@
     transition: background-color 0.3s ease;
 }
 
-.pdf-item:hover {
-    background-color: #e0e0e0;
-}
-
-.pdf-item .download-btn:hover {
-    background-color: var(--secondary-color);
-}
 
 @media (max-width: 760px) {
     .pdf-item {
