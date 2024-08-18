@@ -307,6 +307,12 @@ main > * {
     width: 100%;
     border-radius: 10px;
 }
+
+.level a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
         #departments {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
