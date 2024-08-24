@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <style>
+      .pdf-list {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .pdf-list h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--small-texts);
+        text-align: center;
+      }
+
+      .pdf-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: var(--primary-background);
+        transition: background-color 0.3s ease;
+      }
+
+      .pdf-item h3 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin: 0;
+        max-width: 75%;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-all;
+      }
+
+      .pdf-item .download-btn {
+        padding: 10px 15px;
+        background-color: var(--primary-color);
+        color: var(--small-texts);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      @media (max-width: 760px) {
+        .pdf-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .pdf-item h3 {
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .pdf-item .download-btn {
+          align-self: flex-start;
+        }
+      }
+    </style>
+    <!--     <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <title>Fuoye PDFs</title>
+  </head>
+  <body>
+    <header>
+      <span><a href="../../">NuesaPedia</a></span>
+      <nav>
+        <ul>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../../courses/">Courses</a></li>
+          <li><a href="../../contact">Contact</a></li>
+          <li>
+            <a href="https://github.com/ariyoaresa/fuoyepdf">Contribute</a>
+          </li>
+          <li><a href="../../donate-pdf">Add a PDF</a></li>
+        </ul>
+      </nav>
+      <span class="hamburger" onclick="toggleNav()">&#9776;</span>
+    </header>
+    <main>
+      <section class="pdf-list">
+        <h2>Available PDFs</h2>
+        <div class="pdf-item">
+          <h3>Second Semester Course Outline</h3>
+          <a
+            href="../../pdfs/200level/second semester outline 200level(ENGR. SAKIRULLAH).pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Strength of Materials by D. K. Singh</h3>
+          <a
+            href="../../pdfs/200level/Strength of Materials by D. K. Singh (z-lib.org) (1).pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>
+            CVE 204  notes Engr SHAKIRULLAH
+          </h3>
+          <a
+            href="../../pdfs/200level/CVE 204  notes Engr SHAKIRULLAH.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Strength of Materials</h3>
+          <a
+            href="../../pdfs/200level/Strength of Materials.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>SFD_AND_BMD_Calculations</h3>
+          <a
+            href="../../pdfs/200level/SFD_AND_BMD_Calculations.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE written note</h3>
+          <a
+            href="../../pdfs/200level/CVE written note.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>cve 204 shear force and Bending moments full pdf(adewale sakiru abiodun)</h3>
+          <a
+            href="../../pdfs/200level/cve 204 shear force and Bending moments full pdf(adewale sakiru abiodun).pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 - Temperature Stress</h3>
+          <a
+            href="../../pdfs/200level/CVE 204 - Temperature Stress.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 note(Adewale sakiru abiodun ENGR SAKIRULLAH )</h3>
+          <a
+            href="../../pdfs/200level/CVE 204 note(Adewale sakiru abiodun ENGR SAKIRULLAH ).pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204(5)Engr. sakirullah</h3>
+          <a
+            href="../../pdfs/200level/CVE 204(5)Engr. sakirullah.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Introduction to Strenght of Materials</h3>
+          <a
+            href="../../pdfs/200level/CamScanner 04-21-2024 14.10.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Compressed Fluid Mechanics Past Questions by Afolabi Abdulahi Olajide</h3>
+          <a
+            href="../../pdfs/200level/Compressed_Fluid_Mechanics_Past_QuestionsAfolabi_Abdulahi_Olajide.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Elongation of tapering ENGR SHAKIRULLAH</h3>
+          <a
+            href="../../pdfs/200level/Elongation of tapering ENGR SHAKIRULLAH.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 (4) ADEWALE SAKIRU</h3>
+          <a
+            href="../../pdfs/200level/CVE 204 (4) ADEWALE SAKIRU.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 (3) ENGR SHAKIRULLAH</h3>
+          <a
+            href="../../pdfs/200level/CVE 204 (3) ENGR SHAKIRULLAH.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>200 LEVEL Strength of materials</h3>
+          <a
+            href="../../pdfs/200level/200 LEVEL Strength of materials.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 (2) ENGR SHAKIRULLAH</h3>
+          <a
+            href="../../pdfs/200level/CVE204 (2) ADEWALE SAKIRU .docx"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Shear Force and Bending Moments - INTRODUCTORY NOTES</h3>
+          <a
+            href="../../pdfs/200level/Shear Force and Bending Moments - INTRODUCTORY NOTES.pdf"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>Project 1 - Civil Engineering.docx_23(ENGR. SAKIRULLAH)</h3>
+          <a
+            href="../../pdfs/200level/Project 1 - Civil Engineering.docx_23(ENGR. SAKIRULLAH).docx"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 by ENGR SHAKIRULLAH</h3>
+          <a
+            href="../../pdfs/200level/CVE 204 by ENGR SHAKIRULLAH.doc"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE Introduction(ENGR. SAKIRULLAH)</h3>
+          <a
+            href="../../pdfs/200level/CVE Introduction(ENGR. SAKIRULLAH).docx"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        <div class="pdf-item">
+          <h3>CVE 204 (1) ADEWALE SAKIRU ABIODUN</h3>
+          <a
+            href="../../pdfs/200level/CVE 204 (1) ADEWALE SAKIRU ABIODUN.docx"
+            class="download-btn"
+            download
+            >Download PDF</a
+          >
+        </div>
+        
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Ariyo Aresa</p>
+      <p>Created with ❤ by Ariyo Aresa</p>
+    </footer>
+    <script src="../../assets/script.js"></script>
+  </body>
+</html>
