@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <style>
+     .pdf-list {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.pdf-list h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--small-texts);
+    text-align: center;
+}
+
+.pdf-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-background);
+    transition: background-color 0.3s ease;
+}
+
+.pdf-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+    max-width: 75%;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.pdf-item .download-btn {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--small-texts);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 760px) {
+    .pdf-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-item h3 {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pdf-item .download-btn {
+        align-self: flex-start;
+    }
+}
+
+    </style>
+<!--     <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <title>Fuoye PDFs</title>
+</head>
+<body>
+    <header>
+        <span><a href="../../../">NuesaPedia</a></span>
+        <nav>
+            <ul>
+                <li><a href="../../../">Home</a></li>
+                <li><a href="../../../courses/">Courses</a></li>
+                <li><a href="../../../contact">Contact</a></li>
+                <li><a href="https://github.com/ariyoaresa/fuoyepdf">Contribute</a></li>
+                <li><a href="../../../donate-pdf">Add a PDF</a></li>
+            </ul>
+        </nav>
+        <span class="hamburger" onclick="toggleNav()">&#9776;</span>
+
+    </header>
+    <main>
+        <section class="pdf-list">
+            <h2>Available PDFs</h2>
+            <div class="pdf-item">
+                <h3>Art Of Intel x86 Assembly</h3>
+                <a href="https://drive.google.com/file/d/11Qbb9Tdq8nwuPMOjqy3nlHb-4pAVSPk8/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+            <div class="pdf-item">
+                <h3>assembly_tutorial</h3>
+                <a href="https://drive.google.com/file/d/11UZuYFB43gn6Zt2Xwf9fudIAD2ZQGYui/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+            <div class="pdf-item">
+                <h3>CPE304 (1)</h3>
+                <a href="https://drive.google.com/file/d/11XB4sg6h1P2qpMCA8td2UiX-O-rpb8AM/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+            <div class="pdf-item"
+                <h3>CPE304 (2)</h3>
+                <a href="https://drive.google.com/file/d/11dyZ6VNkaadsRhzh_ksWE9P7lLgbThHu/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+            <div class="pdf-item">
+                <h3>CPE304 (3)</h3>
+                <a href="https://drive.google.com/file/d/11ewVU63KBvbBRzvdgWITLjsP06qXacgB/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+            <div class="pdf-item">
+                <h3>CPE304 (4)</h3>
+                <a href="https://drive.google.com/file/d/11fLhOWU_USW0PCDuZUyNLFHLupek_bYE/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+            <div class="pdf-item">
+                <h3>CPE304 (5)</h3>
+                <a href="https://drive.google.com/file/d/11l3SzhnNU-cHY-Hl6upvcQ5vcuV0mFDY/view?usp=drive_link" class="download-btn" download>Download PDF</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ariyo Aresa</p>
+        <p>Created with ❤ by Ariyo Aresa</p>
+    </footer>
+    <script src="../../../assets/script.js"></script>
+</body>
+</html>
