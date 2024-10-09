@@ -20,7 +20,7 @@
 }
 
 .post img {
-    max-width: 100%;
+    max-width: 90vw;
     height: 200px;
     object-fit: cover;
 }
