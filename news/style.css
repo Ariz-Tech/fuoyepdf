@@ -1,0 +1,52 @@
+/* Add this to your existing CSS */
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post h2 {
+    padding: 15px;
+    font-size: 1.5rem;
+    color: var(--primary-background);
+}
+
+.post p {
+    padding: 0 15px 15px 15px;
+    color: #666;
+}
+
+.post a {
+    display: block;
+    padding: 15px;
+    background-color: var(--primary-background);
+    color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.post a:hover {
+    background-color: #045e00;
+}
