@@ -39,14 +39,10 @@
 .post a {
     display: block;
     padding: 15px;
-    background-color: var(--primary-background);
-    color: var(--primary-color);
-    text-align: center;
+    color: var(--small-texts);
+    text-align: left;
     text-decoration: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
-
-.post a:hover {
-    background-color: #045e00;
+.post a.readmore{
+    text-align: center;
 }
