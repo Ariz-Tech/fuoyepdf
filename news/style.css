@@ -38,11 +38,11 @@
 
 .post a {
     display: block;
-    padding: 15px;
     color: var(--small-texts);
     text-align: left;
     text-decoration: none;
 }
 .post a.readmore{
+    padding: 15px;
     text-align: center;
 }
