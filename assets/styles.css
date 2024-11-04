@@ -92,31 +92,49 @@ main > * {
     border-radius: 10px;
 }
 
+/* Base styling for the features section */
 #features {
     background-image: var(--primary-linear-background);
     color: var(--primary-color);
-    border-radius: 40px 40px;
-}
-
-#features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: var(--primary-color); /* Green color */
+    padding: 40px 20px;
     text-align: center;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
 }
 
+/* Title styling */
+#features h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* List styling */
 #features ul {
     list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-    display: grid;
-    gap: 20px;
-    padding: 50px;
+    padding: 0;
 }
 
-#features ul li {
-    margin-bottom: 15px;
-    text-align: left;
+#features li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Icon styling */
+#features svg {
+    width: 24px;
+    height: 24px;
+    fill: #007bff;
+    margin-right: 12px;
+}
+
+/* Remove border on the last item */
+#features li:last-child {
+    border-bottom: none;
 }
 
 #download {
