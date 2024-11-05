@@ -129,6 +129,9 @@ main > * {
     fill: var(--primary-color);
     margin-right: 12px;
 }
+#features svg path{
+    stroke: var(--primary-color);
+}
 
 /* Remove border on the last item */
 #features li:last-child {
