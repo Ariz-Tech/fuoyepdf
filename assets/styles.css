@@ -126,7 +126,7 @@ main > * {
 #features svg {
     width: 24px;
     height: 24px;
-    fill: #007bff;
+    fill: var(--primary-color);
     margin-right: 12px;
 }
 
