@@ -64,14 +64,14 @@
             event.preventDefault(); // Prevent default form submission
 
             // Collect form data
-            const name = document.getElementById("name").value;
+            const submitterName = document.getElementById("submitterName").value;
             const level = document.getElementById("level").value;
             const course = document.getElementById("course").value;
             const pdfFile = document.getElementById("pdfFile").value;
 
             // Email body content
             const emailBody = `
-                <strong>Name:</strong> ${name} <br>
+                <strong>submitterName:</strong> ${submitterName} <br>
                 <strong>Level:</strong> ${level} <br>
                 <strong>Course Title:</strong> ${course} <br>
                 <strong>Message:</strong> ${pdfFile} <br>
