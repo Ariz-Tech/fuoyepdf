@@ -4,57 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles.css">
-<!--     <link rel="shortcut icon" href="" type="image/x-icon"> -->
-    <title>Fuoye PDFs</title>
+    <!-- <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon"> -->
+    <title>Fuoye PDFs - Submit a PDF</title>
 </head>
 <body>
     <header>
-        <span><a href="../">NuesaPedia</a></span>
+        <span><a href="../" aria-label="Navigate to the NuesaPedia homepage">NuesaPedia</a></span>
         <nav>
             <ul>
-                <li><a href="../">Home</a></li>
-                <li><a href="../courses/">Courses</a></li>
-                <li><a href="../contact">Contact</a></li>
-                <li><a href="https://github.com/ariyoaresa/fuoyepdf">Contribute</a></li>
-                <li><a href="../donate-pdf">Add a PDF</a></li>
+                <li><a href="../" aria-label="Home page">Home</a></li>
+                <li><a href="../courses/" aria-label="View courses">Courses</a></li>
+                <li><a href="../contact" aria-label="Contact us">Contact</a></li>
+                <li><a href="https://github.com/ariyoaresa/fuoyepdf" aria-label="Contribute on GitHub" target="_blank" rel="noopener noreferrer">Contribute</a></li>
+                <li><a href="../donate-pdf" aria-label="Add a PDF">Add a PDF</a></li>
             </ul>
         </nav>
-        <span class="hamburger" onclick="toggleNav()">&#9776;</span>
-
+        <span class="hamburger" onclick="toggleNav()" aria-label="Open navigation menu">&#9776;</span>
     </header>
     <main>
-
         <section id="add-pdf">
-            <form enctype="multipart/form-data">
+            <form enctype="multipart/form-data" method="post" novalidate>
                 <h2>Submit a PDF</h2>
                 <p style="font-weight: bold;">Submit a PDF you'd like to see on our site.</p>
-                <label for="submitterName">Your Name:</label>
-                <input type="text" id="submitterName" name="submitterName" required>
+                
+                <fieldset>
+                    <legend>Submission Details</legend>
+                    <label for="submitterName">Your Name:</label>
+                    <input type="text" id="submitterName" name="submitterName" required aria-required="true">
 
-                <label for="course">Course Code:</label>
-                <input type="text" id="course" name="course" required>
+                    <label for="course">Course Code:</label>
+                    <input type="text" id="course" name="course" required aria-required="true">
 
-                <label for="level">Level (of the PDF):</label>
-                <select id="level" name="level" required>
-                    <option value="">Select Level</option>
-                    <option value="100 Level">100 Level</option>
-                    <option value="200 Level">200 Level</option>
-                    <option value="300 Level">300 Level</option>
-                    <option value="400 Level">400 Level</option>
-                    <option value="500 Level">500 Level</option>
-                </select>
+                    <label for="level">Level (of the PDF):</label>
+                    <select id="level" name="level" required aria-required="true">
+                        <option value="">Select Level</option>
+                        <option value="100 Level">100 Level</option>
+                        <option value="200 Level">200 Level</option>
+                        <option value="300 Level">300 Level</option>
+                        <option value="400 Level">400 Level</option>
+                        <option value="500 Level">500 Level</option>
+                    </select>
 
-                <label for="pdfFile">Upload PDF File:</label>
-                <input type="file" id="pdfFile" name="pdfFile" accept=".pdf, .doc, .pptx, .docx" required>
-
-                <input type="submit" value="Submit">
+                    <label for="pdfFile">Upload PDF File:</label>
+                    <input type="file" id="pdfFile" name="pdfFile" accept=".pdf, .doc, .pptx, .docx" required aria-required="true">
+                </fieldset>
+                
+                <input type="submit" value="Submit" aria-label="Submit your form">
             </form>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 NuesaPedia</p>
-        <p>Created with ❤ by Ariyo Aresa</p>
+        <p>Created with ❤ by <a href="https://github.com/ariyoaresa" target="_blank" rel="noopener noreferrer">Ariyo Aresa</a></p>
     </footer>
     <script src="../assets/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const name = document.getElementById("name").value;
+            const level = document.getElementById("level").value;
+            const course = document.getElementById("course").value;
+            const pdfFile = document.getElementById("pdfFile").value;
+
+            // Email body content
+            const emailBody = `
+                <strong>Name:</strong> ${name} <br>
+                <strong>Level:</strong> ${level} <br>
+                <strong>Course Title:</strong> ${course} <br>
+                <strong>Message:</strong> ${pdfFile} <br>
+            `;
+
+            // Send email using SMTP.js
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "ariyoaresa89@gmail.com",
+                Password: "28697CFEE316BCFFCE23F802726E95EC3E84",
+                To: "ariyoaresa89@gmail.com, aresariyo@gmail.com",
+                From: "ariyoaresa89@gmail.com",
+                Subject: "New FUOYE PDFs Request",
+                Body: emailBody
+            }).then(response => {
+                if (response === "OK") {
+                    alert("Request sent successfully!");
+                    document.getElementById("fuoyeForm").reset();
+                } else {
+                    alert("There was an error sending the request: " + response);
+                }
+            }).catch(error => {
+                alert("An error occurred: " + error);
+            });
+        }
+    </script>
 </body>
 </html>
